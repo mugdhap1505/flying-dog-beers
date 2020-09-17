@@ -3,8 +3,6 @@ fig = go.Figure() # or any Plotly Express function e.g. px.bar(...)
 # fig.add_trace( ... )
 # fig.update_layout( ... )
 
-
-
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
@@ -124,17 +122,13 @@ fig.show()
 
 
 
-app = dash.Dash(__name__)
-server = app.server
-app.title=tabtitle
 
-app.layout = html.Div(children=[
-    html.H1(myheading),
-    dcc.Graph(
-        figure=fig
-    ),
-]
-)
 
-if __name__ == '__main__':
-    app.run_server()
+
+
+app = dash.Dash()
+app.layout = html.Div([
+    dcc.Graph(figure=fig)
+])
+
+app.run_server(debug=True, use_reloader=False)  # Turn off reloader if inside Jupyter
