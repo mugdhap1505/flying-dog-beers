@@ -1,32 +1,4 @@
-Skip to content
-Search or jump to…
 
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@mugdhap1505 
-austinlasseter
-/
-plotly_dash_tutorial
-2
-1223
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-plotly_dash_tutorial/04 visualize pandas/pandas_example1.py /
-@austinlasseter
-austinlasseter refreshed all examples
-Latest commit bc242a0 on Sep 6, 2019
- History
- 1 contributor
-45 lines (39 sloc)  1.31 KB
   
 
 # imports
@@ -73,15 +45,3 @@ app.layout = html.Div(children=[
 # execute
 if __name__ == '__main__':
     app.run_server()
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
