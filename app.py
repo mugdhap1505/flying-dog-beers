@@ -123,14 +123,18 @@ fig.show()
 
 
 
+external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server = app.server
+app.title=tabtitle
 
+app.layout = html.Div(children=[
+    html.H1(myheading),
+    dcc.Graph(
+        figure=fig
+    ),
+]
+)
 
-
-
-
-app = dash.Dash()
-app.layout = html.Div([
-    dcc.Graph(figure=fig)
-])
-
-app.run_server(debug=True, use_reloader=False)  # Turn off reloader if inside Jupyter
+if __name__ == '__main__':
+    app.run_server()
